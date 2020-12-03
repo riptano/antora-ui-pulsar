@@ -19,8 +19,6 @@
 :url-nvm-install: {url-nvm}#installation
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
-image:{img-ci-status}[gulp bundle status, link={url-ci-pipelines}]
-
 This project is a UI bundle that can be used by {url-antora}[Antora] to generate a documentation site.
 You can see a preview of the default UI at {url-preview}.
 
