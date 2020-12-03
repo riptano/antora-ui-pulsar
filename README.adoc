@@ -1,9 +1,9 @@
-= Antora Stargate UI
+= Pulsar Stargate UI
 // Settings:
 :experimental:
 :hide-uri-scheme:
 // Project URLs:
-:url-project: https://github.com/stargate/antora-ui-stargate
+:url-project: https://github.com/riptano/antora-ui-pular
 :url-preview:
 :url-ci-pipelines: {url-project}/workflows
 :img-ci-status: {url-project}/workflows/bundle/badge.svg
