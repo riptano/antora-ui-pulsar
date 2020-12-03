@@ -3,7 +3,7 @@
 :experimental:
 :hide-uri-scheme:
 // Project URLs:
-:url-project: https://github.com/riptano/antora-ui-pular
+:url-project: https://github.com/riptano/antora-ui-pulsar
 :url-preview:
 :url-ci-pipelines: {url-project}/workflows
 :img-ci-status: {url-project}/workflows/bundle/badge.svg
@@ -30,7 +30,7 @@ If you want to simply use the UI for your Antora-generated site, add the followi
 ----
 ui:
   bundle:
-    url: https://github.com/stargate/antora-ui-stargate/releases/download/v0.2/ui-bundle.zip
+    url: https://github.com/riptano/antora-ui-pulsar/releases/download/v0.2/ui-bundle.zip
 ----
 
 Read on to learn how to customize the default UI for your own documentation.
@@ -95,13 +95,6 @@ You should install the Gulp CLI globally (which resolves to a location in your u
 Verify the Gulp CLI is installed and on your PATH by running:
 
  $ gulp --version
-
-[TIP]
-====
-If you prefer to install global packages using Yarn, run this command instead:
-
- $ yarn global add gulp-cli
-====
 
 Now that you have the prerequisites installed, you can fetch and build the UI project.
 
