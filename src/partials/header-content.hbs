@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
-        <svg width="223px" height="43px" alt="Apache Pulsar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.44 43.08"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M61 13.73H46.09C42.06 6 37.8 0 32 0c-7.55 0-11.1 6.59-14.53 13l-.3.56H0v3.81h10c3.53 0 4.25 1.19 4.25 1.19-2.77 4.3-6.1 8.55-11.65 8.55H0v4h2.62c10.76 0 15.46-8.73 19.23-15.74C25.31 8.91 27.72 5 32 5c4.44 0 9.11 9.66 13.22 18.19.6 1.24 1.21 2.51 1.83 3.77-15.76.5-23.27 4.19-29.38 7.2-4.47 2.2-8 4.93-13.81 4.93H0v4h3.83c7 0 11.36-2.16 16-4.45 6.43-3.16 13.72-6.74 30.9-6.74h9.93v-4h-5.61a3 3 0 01-2.47-1C51.6 25 50.64 23 49.7 21l-1.3-2.66s.93-1 3.51-1H61z" fill="#188fff"/><path d="M79.83 13.7H69.44v3.74H79.6c4.2 0 6.61 1.91 6.61 5.33 0 3.24-2.66 5.33-6.77 5.33h-10v13h4v-9.3h5.93c5.42 0 10.88-2.83 10.88-9.22-.03-5.4-4.11-8.88-10.42-8.88zm33.48 15.87c0 5.31-2.66 8.24-7.48 8.24s-7.6-3.07-7.6-8.43V13.7h-4v15.87c0 7.39 4.4 12 11.49 12s11.56-4.57 11.56-12.23V13.7h-4zm14.02-15.87h-3.97v27.44h18.86v-3.75h-14.89V13.7zm29.36 11.8c-5.74-1.23-6.79-2.53-6.79-4.74S152 17 155 17a11.12 11.12 0 017.32 2.76l.4.32 2.36-3.08-.37-.3a14.22 14.22 0 00-9.61-3.36c-5.32 0-9.18 3.24-9.18 7.79 0 5.06 3.71 6.91 9.27 8.12s6.49 2.44 6.49 4.62c0 2.36-2.22 4-5.41 4-3.37 0-5.9-1-8.74-3.62l-.38-.34-2.49 2.95.36.32a15.91 15.91 0 0011.14 4.36c5.61 0 9.52-3.28 9.52-8 .01-4.28-2.68-6.67-8.99-8.04zm23.5-11.99l-12.5 27.63h4.14l3.14-7h13.76l3.1 7h4.29l-12.5-27.63zm-3.61 17l5.29-11.8 5.26 11.8zm38.6-.36c4.29-1 6.82-4 6.82-8.11a7.77 7.77 0 00-2.18-5.56 11 11 0 00-7.87-2.79h-11.87v27.45h4V30.85h6.82l7.67 10.28h4.9zm-11.14-3v-9.71h7.67c4 0 6.28 1.72 6.28 4.8s-2.48 5-6.31 5z" fill="#464e56"/></g></g></svg>
+        <img width="223px" height="43px" src="{{{uiRootPath}}}/img/pulsar.svg"/>
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -13,64 +13,23 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-end__group">
-          <!--<a class="navbar-item" href="/docs">Docs</a>
-          <a class="navbar-item" href="/community">Community</a>
-          <a class="navbar-item" href="/blog">Blog</a>
-          <a class="navbar-item search" href="/results">
-            <svg width="1em" height="1em" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5ZM10.3346 11.749C9.25967 12.5356 7.93407 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 7.93414 12.5355 9.25979 11.7488 10.3348L16.6874 15.2734C17.0779 15.6639 17.0779 16.2971 16.6874 16.6876C16.2969 17.0781 15.6637 17.0781 15.2732 16.6876L10.3346 11.749Z"
-                fill="currentColor" />
-            </svg>
-          </a>
-          <form class="search-form searchbar" role="search" id="hiddenSearchBox" action="/results" method="get">
-            <div class="input-group">
-              <input type="search" name="q" class="form-control" placeholder="Search">
-              <button type="submit" class="btn btn-default" data-toggle="searchbar" data-target="#hiddenSearchBox">
-                <span>
-                  <svg width="1em" height="1em" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5ZM10.3346 11.749C9.25967 12.5356 7.93407 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 7.93414 12.5355 9.25979 11.7488 10.3348L16.6874 15.2734C17.0779 15.6639 17.0779 16.2971 16.6874 16.6876C16.2969 17.0781 15.6637 17.0781 15.2732 16.6876L10.3346 11.749Z"
-                      fill="currentColor" />
-                  </svg>
-                </span>
-                <span class="sr-only">Submit</span>
-              </button>
-            </div>
-          </form>
-        </div>-->
+          <!--<a class="navbar-item" href="/docs">Docs</a>-->
+          <!--<a class="navbar-item" href="/community">Community</a>-->
+          <!--<a class="navbar-item" href="/blog">Blog</a>-->
+          <!-- <a class="navbar-item search" href="/results">
+            <img width="34px" height="34px" src="{{{uiRootPath}}}/img/search.svg"/>
+          </a>-->
+        </div>
         <div class="navbar-end__group">
           <!--<a class="navbar-item social-icon" href="https://twitter.com/stargateio" target="_blank" rel="noopener noreferrer">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M16.5 0C7.3873 0 0 7.3873 0 16.5V17.5C0 26.6127 7.3873 34 16.5 34H17.5C26.6127 34 34 26.6127 34 17.5V16.5C34 7.3873 26.6127 0 17.5 0H16.5ZM25.952 14.534C25.952 19.8909 21.824 26.0786 14.28 26.0786C11.968 26.0786 9.808 25.4061 8 24.2666C8.32 24.3062 8.648 24.322 8.976 24.322C10.896 24.322 12.664 23.6732 14.072 22.5812C12.28 22.5496 10.76 21.3785 10.24 19.7643C10.488 19.8118 10.744 19.8355 11.008 19.8355C11.384 19.8355 11.744 19.788 12.088 19.6931C10.216 19.3212 8.8 17.6753 8.8 15.713V15.6576C9.352 15.9583 9.984 16.1403 10.656 16.164C9.56 15.436 8.832 14.1937 8.832 12.7853C8.832 12.0415 9.032 11.3452 9.384 10.7438C11.408 13.1967 14.432 14.8188 17.84 14.985C17.776 14.6843 17.736 14.3757 17.736 14.0592C17.736 11.8199 19.576 10 21.84 10C23.016 10 24.08 10.4906 24.832 11.2819C25.768 11.0999 26.648 10.7675 27.44 10.3007C27.128 11.2502 26.48 12.0494 25.632 12.5479C26.464 12.445 27.256 12.2314 27.992 11.907C27.44 12.722 26.744 13.442 25.944 14.0117C25.952 14.1858 25.952 14.3599 25.952 14.534Z"
-                fill="currentColor" />
-            </svg>
-          </a>
-          <a class="navbar-item social-icon" href="https://groups.google.com/a/lists.stargate.io/g/stargate-users" target="_blank">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Group" fill="currentColor">
-                  <path
-                    d="M17,0 C26.3888,0 34,7.61116 34,17 C34,26.3888 26.3888,34 17,34 C7.61116,34 0,26.3888 0,17 C0,7.61116 7.61116,0 17,0 Z M25,9 L9,9 C7.9,9 7,9.9 7,11 L7,11 L7,23 C7,24.1 7.9,25 9,25 L9,25 L25,25 C26.1,25 27,24.1 27,23 L27,23 L27,11 C27,9.9 26.1,9 25,9 L25,9 Z M27,11 L17,18 L7,11 L27,11 Z" />
-                </g>
-              </g>
-            </svg>
+            <img width="34px" height="34px" src="{{{uiRootPath}}}/img/twitter.svg"/>
           </a>-->
-          <a class="navbar-item social-icon" href="https://github.com/riptano/pulsar-distro" target="_blank" rel="noopener noreferrer">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0)">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M16.402 0C7.34542 0 -0.000488281 7.34591 -0.000488281 16.4025C-0.000488281 23.6478 4.72907 29.7862 11.1693 32C11.9743 32.1006 12.2762 31.5975 12.2762 31.195C12.2762 30.7925 12.2762 29.7862 12.2762 28.3774C7.74794 29.3836 6.74165 26.1635 6.74165 26.1635C6.03724 24.2516 4.93033 23.7484 4.93033 23.7484C3.42089 22.7421 5.03096 22.7421 5.03096 22.7421C6.64102 22.8428 7.54668 24.4528 7.54668 24.4528C9.05611 26.9686 11.3706 26.2642 12.2762 25.8616C12.3769 24.7547 12.88 24.0503 13.2825 23.6478C9.65988 23.2453 5.83599 21.8365 5.83599 15.4969C5.83599 13.6855 6.43976 12.2767 7.54668 11.0692C7.44605 10.7673 6.84228 9.0566 7.74794 6.84277C7.74794 6.84277 9.15674 6.44025 12.2762 8.55346C13.5844 8.15094 14.9932 8.05031 16.402 8.05031C17.8108 8.05031 19.2196 8.25157 20.5278 8.55346C23.6473 6.44025 25.0561 6.84277 25.0561 6.84277C25.9618 9.0566 25.358 10.7673 25.2574 11.1698C26.2637 12.2767 26.9681 13.7862 26.9681 15.5975C26.9681 21.9371 23.1442 23.2453 19.5215 23.6478C20.1253 24.1509 20.6284 25.1572 20.6284 26.6667C20.6284 28.8805 20.6284 30.5912 20.6284 31.195C20.6284 31.5975 20.9303 32.1006 21.7354 32C28.2762 29.7862 32.9052 23.6478 32.9052 16.4025C32.8045 7.34591 25.4586 0 16.402 0Z"
-                  fill="currentColor" />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="32.805" height="32" fill="currentColor" transform="translate(-0.000488281)" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
+          <!--<a class="navbar-item social-icon" href="https://groups.google.com/a/lists.stargate.io/g/stargate-users" target="_blank">
+            <img width="34px" height="34px" src="{{{uiRootPath}}}/img/groups.svg"/>
+          </a>-->
+          <!--<a class="navbar-item social-icon" href="https://github.com/riptano/pulsar-distro" target="_blank" rel="noopener noreferrer">
+            <img width="34px" height="34px" src="{{{uiRootPath}}}/img/github.svg"/>
+          </a>-->
         </div>
       </div>
     </div>
